@@ -1,0 +1,12 @@
+server {
+  listen   <%= node['blog']['port'] %>;
+  server_name  <%= node['blog']['server_name'] %>;
+
+  access_log  /var/log/nginx/localhost.access.log;
+  error_page  404  /404.html;
+
+  location / {
+    root   <%= node['blog']['root'] %>;
+    index  index.html index.htm;
+  }
+}

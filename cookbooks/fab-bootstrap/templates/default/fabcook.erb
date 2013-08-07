@@ -1,0 +1,23 @@
+server {
+  listen <%= node['fabcook']['port'] %>;
+  server_name <%= node['fabcook']['server_name'] %>;
+
+  set $rails_dir <%= node['fabcook']['root'] %>;
+  
+  root $rails_dir/current/public;
+  access_log <%= node['fabcook']['root'] %> combined;
+
+  rewrite_log on;
+#  error_page   500 502 504  /system/50x.html;
+
+  include maintenance_page.conf;
+
+        include rails.conf;
+
+        location / {
+    proxy_pass <%= node['fabcook']['proxy'] %>;
+        include proxy_settings.conf;
+  }
+
+  include error_pages.conf;
+}
