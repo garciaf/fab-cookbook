@@ -8,7 +8,7 @@ package "libsqlite3-dev"
 # To get version of ruby 
 rbenv_ruby "1.9.3-p327"
 
-rbenv_ruby "Ruby 1.9.3-p327" do 
+rbenv_ruby "1.9.3-p327" do 
   ruby_version "1.9.3-p327"
   global true
 end
