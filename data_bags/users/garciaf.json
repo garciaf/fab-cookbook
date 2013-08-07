@@ -1,0 +1,1 @@
+{"name":"data_bag_item_users_garciaf","json_class":"Chef::DataBagItem","chef_type":"data_bag_item","data_bag":"users","raw_data":{"id":"garciaf","password":"$1$NK1z15EU$r.Nmg.9A71vvm6boqfb1a.","groups":["sysadmin","dba","devops"]}}
