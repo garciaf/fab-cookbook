@@ -1,0 +1,26 @@
+{
+ "mysql": {
+    "server_root_password": "root",
+    "server_repl_password": "root",
+    "server_debian_password": "root"
+  },
+  "vsftpd": {
+      "chroot_local_user": "NO",
+      "chroot_users": ["rails"]
+  },
+  "nginx":{
+    "user": "rails"
+  },"rbenv":{
+    "user": "rails",
+    "group_users": ["rails"],
+    "install_prefix": "/home/rails"
+  },"nodejs":{
+    "install_method":"package"
+  },
+  "run_list":[
+    "recipe[apt]",
+    "recipe[build-essential]",
+    "recipe[mysql::server]",
+    "recipe[nginx]",
+    "role[ruby]"
+]}
