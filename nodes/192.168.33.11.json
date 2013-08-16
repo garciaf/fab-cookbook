@@ -1,0 +1,11 @@
+{
+  "gitlab":{
+    "gitlab_branch": "3-1-stable",
+    "database": {
+      "type": "mysql"
+    }
+ },
+  "run_list":[
+    "recipe[gitlab::default]"
+  ]
+}
